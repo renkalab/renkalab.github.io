@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<style>
+    /* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ヘッダー */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff3e3e; /* アクセントカラー */
+}
+
+/* ヒーローセクション */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://unsplash.com') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff3e3e;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e63535;
+}
+
+/* 共通セクション */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    nav ul { display: none; } /* モバイル時はメニューを隠す（簡易版） */
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENKALAB</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts の読み込み -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Renka Lab</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Renka Lab</h1>
+                <p>価値</p>
+                <p><a href="#contact" class="btn">Get Started</a>    <a href="https://www.instagram.com/renka_lab/" class="btn">Instagram</a>    <a href="https://www.youtube.com" class="btn">YouTube</a>    <a href="https://shumai01414.github.io/server.shumai01414.github.io" class="btn">Server</a></p>
+            </div>
+        </main>
+
+        <section id="about" class="container">
+            <h2>About Us</h2>
+            <p>ただsnsを見ているだけ。それだけの日常から抜け出しませんか。<br>自ら手を動かし、新しいものを生み出していく。<br>たとえ、それが小さなものであっても、ゲームの中であっても。<br>今あるモノだけで満足してはいけない。<br>その心から始まる、このアカウント、このホームページです。</p>
+        </section>
+        
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>mail : renka.lab@proton.me</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 renkalab</p>
+    </footer>
+</body>
+</html>
